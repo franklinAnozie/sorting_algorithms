@@ -1,4 +1,6 @@
-/* int **knuth_sequence(int size)
+#include "sort.h"
+
+int **knuth_sequence(int size)
 {
     static int **new_sequence;
     int i = 0, n = 0;
@@ -33,4 +35,3 @@
     new_sequence[i] = NULL;
     return (new_sequence);
 }
-*/

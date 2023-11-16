@@ -55,4 +55,3 @@ void swap(int *max, int *min)
     *max = *min;
     *min = temp;
 }
-
