@@ -69,10 +69,3 @@ void insertion_sort(int *array, int size)
 		i += 1;
 	}
 }
-
-void swap(int *max, int *min)
-{
-    int temp = *max;
-    *max = *min;
-    *min = temp;
-}

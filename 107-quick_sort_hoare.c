@@ -43,10 +43,3 @@ int hoare_partition(int *array, int min, int max, int size)
     print_array(array, (size_t)size);
     return (j);
 }
-
-void swap(int *max, int *min)
-{
-    int temp = *max;
-    *max = *min;
-    *min = temp;
-}
