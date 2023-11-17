@@ -15,7 +15,7 @@ void shell_sort(int *array, size_t size)
             print_array(array, size);
             break;
         }
-        while (array[j] && array[j + seq[0][i]])
+        while (j + seq[0][i] < size)
         {
             if (array[j] > array[j + seq[0][i]])
                 swap(&array[j], &array[j + seq[0][i]]);
