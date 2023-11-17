@@ -2,7 +2,7 @@
 
 int **knuth_sequence(int size)
 {
-    static int **new_sequence;
+    int **new_sequence;
     int i = 0, n = 0;
     
     new_sequence = malloc(sizeof(int *));
@@ -21,17 +21,14 @@ int **knuth_sequence(int size)
         {
             n = 1;
             new_sequence[0][i] = n;
-            printf("new_sequence[0][%d]: %d\n", i, new_sequence[0][i]);
         }
         else
         {
             new_sequence[0][i] = n;
-            printf("new_sequence[0][%d]: %d\n", i, new_sequence[0][i]);
         }
         n = n * 3 + 1;
         i++;
     }
-    new_sequence = realloc(new_sequence, (i + 1) * sizeof(int *));
-    new_sequence[i] = NULL;
+    new_sequence[0][i] = 0;
     return (new_sequence);
 }

@@ -25,17 +25,60 @@ int main(void)
     
     size_t n = sizeof(array) / sizeof(array[0]);
     
-    printf("n: %ld\n", n);
     print_array(array, n);
-    printf("n: %ld\n", n);
-    printf("\n");
-    printf("n: %ld\n", n);
+    printf("\nshell sort\n");
     shell_sort(array, n);
-    printf("n: %ld\n", n);
     printf("\n");
-    printf("n: %ld\n", n);
     print_array(array, n);
-    printf("n: %ld\n", n);
+
+    int ar[] = {695, 341, 919, 39, 766, 680, 762, 152, 791, 475,
+                66, 827, 508, 80, 126, 584, 837, 443, 342, 773,
+                121, 956, 125, 748, 538, 990, 706, 90, 111, 41,
+                638, 330, 576, 661, 927, 711, 287, 336, 526, 916,
+                260, 710, 259, 378, 636, 694, 701, 175, 500, 266};
+    
+    print_array(ar, n);
+    printf("\nbubble sort\n");
+    bubble_sort(ar, n);
+    printf("\n");
+    print_array(ar, n);
+
+    int arr[] = {695, 341, 919, 39, 766, 680, 762, 152, 791, 475,
+            66, 827, 508, 80, 126, 584, 837, 443, 342, 773,
+            121, 956, 125, 748, 538, 990, 706, 90, 111, 41,
+            638, 330, 576, 661, 927, 711, 287, 336, 526, 916,
+            260, 710, 259, 378, 636, 694, 701, 175, 500, 266};
+    
+    print_array(arr, n);
+    printf("\nselection sort\n");
+    selection_sort(arr, n);
+    printf("\n");
+    print_array(arr, n);
+
+    int arra[] = {695, 341, 919, 39, 766, 680, 762, 152, 791, 475,
+            66, 827, 508, 80, 126, 584, 837, 443, 342, 773,
+            121, 956, 125, 748, 538, 990, 706, 90, 111, 41,
+            638, 330, 576, 661, 927, 711, 287, 336, 526, 916,
+            260, 710, 259, 378, 636, 694, 701, 175, 500, 266};
+    
+    print_array(arra, n);
+    printf("\nquick sort\n");
+    quick_sort(arra, n);
+    printf("\n");
+    print_array(arra, n);
+
+    int a[] = {695, 341, 919, 39, 766, 680, 762, 152, 791, 475,
+            66, 827, 508, 80, 126, 584, 837, 443, 342, 773,
+            121, 956, 125, 748, 538, 990, 706, 90, 111, 41,
+            638, 330, 576, 661, 927, 711, 287, 336, 526, 916,
+            260, 710, 259, 378, 636, 694, 701, 175, 500, 266};
+    
+    print_array(a, n);
+    printf("\nquick sort hoare\n");
+    quick_sort_hoare(a, n);
+    printf("\n");
+    print_array(a, n);
+
 
     return (0);
 }

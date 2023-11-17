@@ -3,7 +3,6 @@
 void selection_sort(int *array, size_t size)
 {
     size_t i=0, j, min;
-    int temp;
     
     while (i < size - 1)
     {
@@ -17,9 +16,7 @@ void selection_sort(int *array, size_t size)
         }
         if (min != i)
         {
-            temp = array[i];
-            array[i] = array[min];
-            array[min] = temp;
+            swap(&array[i], &array[min]);
             print_array(array, size);
         }
         i++;
