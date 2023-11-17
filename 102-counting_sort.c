@@ -15,9 +15,9 @@ void counting_sort(int *array, size_t size)
 	}
 
 	count_array = malloc(sizeof(int) * (max + 1));
-	array_copy = malloc(sizeof(int) * (size_c));
 	if (count_array == NULL)
 		exit(EXIT_FAILURE);
+	array_copy = malloc(sizeof(int) * (size_c));
 	if (array_copy == NULL)
 	{
 		free(count_array);
@@ -42,13 +42,7 @@ void array_sort(int *counter, int *new_array, int *array, int max, int size_c)
 {
 	int i, j = 0;
 
-	while (j <= max)
-	{
-		if (j > 0)
-			printf(", ");
-		printf("%d", counter[j]);
-		j++;
-	}
+	print_array(counter, max);
 
 	for (i = size_c - 1; i >= 0; i--)
 		new_array[--counter[array[i]]] = array[i];
