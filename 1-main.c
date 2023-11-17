@@ -31,6 +31,18 @@ listint_t *create_listint(const int *array, size_t size)
     return (list);
 }
 
+void free_node(listint_t *list)
+{
+    listint_t *temp;
+    while (list != NULL)
+    {
+        temp = list;
+        list = list->next;
+        free(temp);
+    }
+    free(list);
+}
+
 /**
  * main - Entry point
  *
@@ -50,5 +62,6 @@ int main(void)
     insertion_sort_list(&list);
     printf("\n");
     print_list(list);
+    free_node(list);
     return (0);
 }
