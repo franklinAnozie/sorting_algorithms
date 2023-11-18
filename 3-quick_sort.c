@@ -11,7 +11,7 @@ void quick_sort(int *array, size_t size)
 	int min = 0, max = (int)size - 1;
 	int sz = (int)size;
 
-	if (array == NULL || size < 2)
+	if (array == NULL)
 		exit(EXIT_FAILURE);
 
 	_quick_sort(array, min, max, sz);
@@ -65,4 +65,16 @@ int lomuto_partition(int *array, int min, int max, int size)
 	swap(&array[i], &array[max]);
 	print_array(array, (size_t)size);
 	return (i);
+}
+
+/**
+ * swap - swaps two integer
+ * @max: max
+ * @min: min
+ */
+void swap(int *max, int *min)
+{
+	int temp = *max;
+	*max = *min;
+	*min = temp;
 }
