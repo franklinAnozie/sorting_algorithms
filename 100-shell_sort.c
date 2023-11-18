@@ -10,7 +10,7 @@ void shell_sort(int *array, size_t size)
 	int i = 0, j = 0;
 	int **seq;
 
-	if (array == NULL || size < 2)
+	if (array == NULL)
 		exit(EXIT_FAILURE);
 
 	seq = knuth_sequence((int)size);
@@ -90,4 +90,16 @@ void insertion_sort(int *array, int size)
 		}
 		i += 1;
 	}
+}
+
+/**
+ * swap - swaps two integer
+ * @max: max
+ * @min: min
+ */
+void swap(int *max, int *min)
+{
+	int temp = *max;
+	*max = *min;
+	*min = temp;
 }

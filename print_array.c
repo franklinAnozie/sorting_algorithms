@@ -20,15 +20,3 @@ void print_array(const int *array, size_t size)
 	}
 	printf("\n");
 }
-
-/**
- * swap - swaps two integer
- * @max: max
- * @min: min
- */
-void swap(int *max, int *min)
-{
-	int temp = *max;
-	*max = *min;
-	*min = temp;
-}

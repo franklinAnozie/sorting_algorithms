@@ -10,7 +10,7 @@ void quick_sort_hoare(int *array, size_t size)
 	int min = 0, max = (int)size - 1;
 	int sz = (int)size;
 
-	if (array == NULL || size < 2)
+	if (array == NULL)
 		exit(EXIT_FAILURE);
 
 	_quick_sort_hoare(array, min, max, sz);
@@ -68,4 +68,16 @@ int hoare_partition(int *array, int min, int max, int size)
 	swap(&array[min], &array[j]);
 	print_array(array, (size_t)size);
 	return (j);
+}
+
+/**
+ * swap - swaps two integer
+ * @max: max
+ * @min: min
+ */
+void swap(int *max, int *min)
+{
+	int temp = *max;
+	*max = *min;
+	*min = temp;
 }

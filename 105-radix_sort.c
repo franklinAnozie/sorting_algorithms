@@ -11,10 +11,7 @@ void radix_sort(int *array, size_t size)
 	int size_c = (int)size, position = 1;
 	int *count_array, *copy_array;
 
-	if (array == NULL || size < 2)
-		exit(EXIT_FAILURE);
-
-	if (array == NULL || size < 2)
+	if (array == NULL)
 		exit(EXIT_FAILURE);
 
 	for (; i < size_c; i++)
@@ -79,4 +76,16 @@ void count_sort(int *array, int *counter, int *copy_array, int size, int pos)
 
 	for (i = 0; i < size; i++)
 		array[i] = copy_array[i];
+}
+
+/**
+ * swap - swaps two integer
+ * @max: max
+ * @min: min
+ */
+void swap(int *max, int *min)
+{
+	int temp = *max;
+	*max = *min;
+	*min = temp;
 }
