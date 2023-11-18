@@ -64,14 +64,3 @@ int hoare_partition(int *array, int min, int max, int size)
 	return (j);
 }
 
-/**
- * swap - performs swap operation
- * @max: max
- * @min: min
- */
-void swap(int *max, int *min)
-{
-	int temp = *max;
-	*max = *min;
-	*min = temp;
-}
