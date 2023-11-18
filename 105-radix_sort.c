@@ -1,5 +1,10 @@
 #include "sort.h"
 
+/**
+ * radix_sort - performs radix sort operation
+ * @array: array
+ * @size: size
+ */
 void radix_sort(int *array, size_t size)
 {
 	int max = array[0], i = 0;
@@ -32,6 +37,14 @@ void radix_sort(int *array, size_t size)
 	free(copy_array);
 }
 
+/**
+ * count_sort - radix sort helper function
+ * @array: array
+ * @counter: counter
+ * @copy_array: copy_array
+ * @size: size
+ * @pos: pos
+ */
 void count_sort(int *array, int *counter, int *copy_array, int size, int pos)
 {
 	int i = 0;
