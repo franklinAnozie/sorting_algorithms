@@ -8,7 +8,12 @@
 void shell_sort(int *array, size_t size)
 {
 	int i = 0, j = 0;
-	int **seq = knuth_sequence((int)size);
+	int **seq;
+
+	if (array == NULL || size < 2)
+		exit(EXIT_FAILURE);
+
+	seq = knuth_sequence((int)size);
 
 	while (seq[0][i])
 		i++;

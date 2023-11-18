@@ -1,26 +1,29 @@
 #include "sort.h"
 
 /**
- * quick_sort - performs quick sort operation
+ * quick_sort_hoare - performs quick sort operation
  * @array: array
  * @size: size
  */
-void quick_sort(int *array, size_t size)
+void quick_sort_hoare(int *array, size_t size)
 {
 	int min = 0, max = (int)size - 1;
 	int sz = (int)size;
 
-	_quick_sort(array, min, max, sz);
+	if (array == NULL || size < 2)
+		exit(EXIT_FAILURE);
+
+	_quick_sort_hoare(array, min, max, sz);
 }
 
 /**
- * _quick_sort - helper function for quick sort
+ * _quick_sort_hoare - helper function for quick sort
  * @array: array
  * @min: min
  * @max: max
  * @size: size
  */
-void _quick_sort(int *array, int min, int max, int size)
+void _quick_sort_hoare(int *array, int min, int max, int size)
 {
 	int partition;
 
@@ -28,8 +31,8 @@ void _quick_sort(int *array, int min, int max, int size)
 	{
 		partition = hoare_partition(array, min, max, size);
 
-		_quick_sort(array, min, partition - 1, size);
-		_quick_sort(array, partition + 1, max, size);
+		_quick_sort_hoare(array, min, partition - 1, size);
+		_quick_sort_hoare(array, partition + 1, max, size);
 	}
 }
 
@@ -45,6 +48,9 @@ int hoare_partition(int *array, int min, int max, int size)
 {
 	int pivot = array[min];
 	int i = min, j = max;
+
+	if (array == NULL || size < 2)
+		exit(EXIT_FAILURE);
 
 	while (i < j)
 	{

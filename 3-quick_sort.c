@@ -11,7 +11,8 @@ void quick_sort(int *array, size_t size)
 	int min = 0, max = (int)size - 1;
 	int sz = (int)size;
 
-	srand(time(NULL));
+	if (array == NULL || size < 2)
+		exit(EXIT_FAILURE);
 
 	_quick_sort(array, min, max, sz);
 }
@@ -46,12 +47,8 @@ void _quick_sort(int *array, int min, int max, int size)
  */
 int lomuto_partition(int *array, int min, int max, int size)
 {
-	int pivotIndex = min + (rand() % (max - min));
 	int pivot;
 	int i = min, j = min;
-
-	if (pivotIndex != max)
-		swap(&array[pivotIndex], &array[max]);
 
 	pivot = array[max];
 

@@ -7,9 +7,13 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *temp_node, *current_node = (*list)->next;
+	listint_t *temp_node, *current_node;
 	listint_t *prev_node;
 
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
+		exit(EXIT_FAILURE);
+
+	current_node = (*list)->next;
 	while (current_node != NULL)
 	{
 		prev_node = current_node->prev;
