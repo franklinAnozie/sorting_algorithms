@@ -1,5 +1,10 @@
 #include "sort.h"
 
+/**
+ * counting_sort - counting sort function
+ * @array: array
+ * @size: size
+ */
 void counting_sort(int *array, size_t size)
 {
 	int max = array[0], j, i = 1;
@@ -38,6 +43,14 @@ void counting_sort(int *array, size_t size)
 	free(array_copy);
 }
 
+/**
+ * array_sort - array sort function
+ * @counter: counter
+ * @new_array: new array
+ * @array: array
+ * @max: max
+ * @size_c: size_c
+ */
 void array_sort(int *counter, int *new_array, int *array, int max, int size_c)
 {
 	int i, j = 0;

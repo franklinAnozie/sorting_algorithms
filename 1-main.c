@@ -33,26 +33,26 @@ listint_t *create_listint(const int *array, size_t size)
 
 void free_node(listint_t *list)
 {
-    listint_t *temp;
-    while (list != NULL)
-    {
-        temp = list;
-        list = list->next;
-        free(temp);
-    }
-    free(list);
+	listint_t *temp;
+	while (list != NULL)
+	{
+		temp = list;
+		list = list->next;
+		free(temp);
+	}
+	free(list);
 }
 
 void free_node(listint_t *list)
 {
-    listint_t *temp;
-    while (list != NULL)
-    {
-        temp = list;
-        list = list->next;
-        free(temp);
-    }
-    free(list);
+	listint_t *temp;
+	while (list != NULL)
+	{
+		temp = list;
+		list = list->next;
+		free(temp);
+	}
+	free(list);
 }
 
 /**
