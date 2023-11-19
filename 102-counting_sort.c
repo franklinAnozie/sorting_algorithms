@@ -7,12 +7,13 @@
  */
 void counting_sort(int *array, size_t size)
 {
-	int max = array[0], j, i = 1;
+	int max, j, i = 1;
 	int *count_array, *array_copy, size_c;
 
 	if (array == NULL)
 		exit(EXIT_FAILURE);
 
+	max = array[0];
 	size_c = (int)size;
 
 	while (i < size_c)
@@ -58,7 +59,7 @@ void array_sort(int *counter, int *new_array, int *array, int max, int size_c)
 {
 	int i;
 
-	print_array(counter, max);
+	print_array(counter, max + 1);
 
 	for (i = size_c - 1; i >= 0; i--)
 		new_array[--counter[array[i]]] = array[i];

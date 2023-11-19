@@ -7,13 +7,14 @@
  */
 void radix_sort(int *array, size_t size)
 {
-	int max = array[0], i = 0;
+	int max, i = 0;
 	int size_c = (int)size, position = 1;
 	int *count_array, *copy_array;
 
 	if (array == NULL)
 		exit(EXIT_FAILURE);
-
+	
+	max = array[0];
 	for (; i < size_c; i++)
 	{
 		if (array[i] > max)
@@ -23,7 +24,7 @@ void radix_sort(int *array, size_t size)
 	count_array = malloc(sizeof(int) * 10);
 	if (count_array == NULL)
 		exit(EXIT_FAILURE);
-	copy_array = malloc(sizeof(int) * size);
+	copy_array = malloc(sizeof(int) * size_c);
 	if (copy_array == NULL)
 	{
 		free(count_array);
