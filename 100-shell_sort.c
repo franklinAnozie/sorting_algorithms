@@ -7,7 +7,7 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, k;
 	int **seq;
 
 	if (array == NULL)
@@ -31,8 +31,13 @@ void shell_sort(int *array, size_t size)
 			if (array[j] > array[j + seq[0][i]])
 			{
 				swap(&array[j], &array[j + seq[0][i]]);
-				if (array[j] < array[j - seq[0][i]] && j - seq[0][i] >= 0)
-					swap(&array[j], &array[j - seq[0][i]]);
+				k = j;
+				while (k - seq[0][i] >= 0)
+				{
+					if (array[k] < array[k - seq[0][i]])
+						swap(&array[k], &array[k - seq[0][i]]);
+					k = k - seq[0][i];
+				}
 			}
 			j++;
 		}
