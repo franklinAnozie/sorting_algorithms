@@ -77,3 +77,15 @@ void count_sort(int *array, int *counter, int *copy_array, int size, int pos)
 	for (i = 0; i < size; i++)
 		array[i] = copy_array[i];
 }
+
+/**
+ * swap - swaps two integer
+ * @max: max
+ * @min: min
+ */
+void swap(int *max, int *min)
+{
+	int temp = *max;
+	*max = *min;
+	*min = temp;
+}
