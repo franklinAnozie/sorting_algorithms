@@ -56,7 +56,7 @@ void counting_sort(int *array, size_t size)
  */
 void array_sort(int *counter, int *new_array, int *array, int max, int size_c)
 {
-	int i, j = 0;
+	int i;
 
 	print_array(counter, max);
 
