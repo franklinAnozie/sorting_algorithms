@@ -26,10 +26,14 @@ void shell_sort(int *array, size_t size)
 			print_array(array, size);
 			break;
 		}
-		while (array[j] && array[j + seq[0][i]])
+		while (seq[0][i] + j < (int)size)
 		{
 			if (array[j] > array[j + seq[0][i]])
+			{
 				swap(&array[j], &array[j + seq[0][i]]);
+				if (array[j] < array[j - seq[0][i]] && j - seq[0][i] >= 0)
+					swap(&array[j], &array[j - seq[0][i]]);
+			}
 			j++;
 		}
 		print_array(array, size);

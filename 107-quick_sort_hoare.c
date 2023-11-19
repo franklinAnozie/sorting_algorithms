@@ -46,11 +46,8 @@ void _quick_sort_hoare(int *array, int min, int max, int size)
  */
 int hoare_partition(int *array, int min, int max, int size)
 {
-	int pivot = array[min];
+	int pivot = array[max];
 	int i = min, j = max;
-
-	if (array == NULL || size < 2)
-		exit(EXIT_FAILURE);
 
 	while (i < j)
 	{
@@ -65,8 +62,11 @@ int hoare_partition(int *array, int min, int max, int size)
 			print_array(array, (size_t)size);
 		}
 	}
-	swap(&array[min], &array[j]);
-	print_array(array, (size_t)size);
+	if (array[j] < array[min])
+	{
+		swap(&array[min], &array[j]);
+		print_array(array, (size_t)size);
+	}
 	return (j);
 }
 
