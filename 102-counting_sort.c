@@ -67,3 +67,15 @@ void array_sort(int *counter, int *new_array, int *array, int max, int size_c)
 	for (i = 0; i < size_c; i++)
 		array[i] = new_array[i];
 }
+
+/**
+ * swap - swaps two integer
+ * @max: max
+ * @min: min
+ */
+void swap(int *max, int *min)
+{
+	int temp = *max;
+	*max = *min;
+	*min = temp;
+}
