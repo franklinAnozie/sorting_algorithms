@@ -11,9 +11,9 @@ void radix_sort(int *array, size_t size)
 	int size_c = (int)size, position = 1;
 	int *count_array, *copy_array;
 
-	if (array == NULL)
-		exit(EXIT_FAILURE);
-	
+	if (array == NULL || size < 2)
+		return;
+
 	max = array[0];
 	for (; i < size_c; i++)
 	{

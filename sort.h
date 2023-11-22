@@ -40,5 +40,10 @@ void counting_sort(int *array, size_t size);
 void array_sort(int *counter, int *new_array, int *array, int max, int size_c);
 void radix_sort(int *array, size_t size);
 void count_sort(int *array, int *counter, int *copy_array, int size, int pos);
+void merge_sort(int *array, size_t size);
+void merge_sort_rec(int *array, int  start, int end);
+void merge_arrays(int *array, int start, int mid, int end);
+void cocktail_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
 
 #endif
