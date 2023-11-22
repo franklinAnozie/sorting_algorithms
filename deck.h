@@ -28,8 +28,8 @@ typedef enum kind_e
  */
 typedef struct card_s
 {
-	const char *value;
-	const kind_t kind;
+    const char *value;
+    const kind_t kind;
 } card_t;
 
 /**
