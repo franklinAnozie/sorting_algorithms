@@ -10,8 +10,8 @@ void quick_sort_hoare(int *array, size_t size)
 	int min = 0, max = (int)size - 1;
 	int sz = (int)size;
 
-	if (array == NULL)
-		exit(EXIT_FAILURE);
+	if (array == NULL || size < 2)
+		return;
 
 	_quick_sort_hoare(array, min, max, sz);
 }

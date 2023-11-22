@@ -10,10 +10,10 @@ void radix_sort(int *array, size_t size)
 	int max, i = 0;
 	int size_c = (int)size, position = 1;
 	int *count_array, *copy_array;
+  
+	if (array == NULL || size < 2)
+		return;
 
-	if (array == NULL)
-		exit(EXIT_FAILURE);
-	
 	max = array[0];
 	for (; i < size_c; i++)
 	{

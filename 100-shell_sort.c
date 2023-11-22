@@ -10,8 +10,8 @@ void shell_sort(int *array, size_t size)
 	int i = 0, j = 0, k;
 	int **seq;
 
-	if (array == NULL)
-		exit(EXIT_FAILURE);
+	if (array == NULL || size < 2)
+		return;
 
 	seq = knuth_sequence((int)size);
 
